@@ -54,10 +54,6 @@ The results suggest that population growth alone does not explain changes in was
 
 ## Dashboard
 
-The completed Power BI dashboard is available in this repository:
+![Central Florida Municipal Solid Waste Analysis](dashboard.png)
 
-**Central Florida Municipal Solid Waste Analysis.pdf**
-
-## Future Analysis
-
-Future analysis could investigate the relationship between tourism activity, taxable sales, and municipal solid waste generation to determine whether tourism and economic activity help explain county-level differences in waste generation.
+The completed Power BI dashboard is also available as a PDF in this repository.
