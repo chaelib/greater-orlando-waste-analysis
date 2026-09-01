@@ -4,7 +4,7 @@
 
 ![Central Florida Municipal Solid Waste Analysis](dashboard.png)
 
-[View the full Power BI dashboard (PDF)](Central%20Florida%20Municipal%20Solid%20Waste%20Analysis.pdf)
+[View the Full Power BI Dashboard (PDF)](Central%20Florida%20Municipal%20Solid%20Waste%20Analysis.pdf)
 
 ---
 
@@ -14,7 +14,7 @@
 
 This project analyzes municipal solid waste (MSW), recycling, landfill use, population, and per-capita waste generation across **Orange, Seminole, Osceola, and Lake counties** from **2017–2025**.
 
-Rather than simply comparing total waste between counties, the analysis examines waste generation relative to population, year-over-year changes, and differences in recycling performance to identify where the most meaningful trends occur.
+Rather than simply comparing total waste between counties, the analysis examines waste generation relative to population, year-over-year changes, and differences in recycling performance to identify where the most meaningful patterns occur.
 
 ## Key Findings
 
@@ -42,8 +42,8 @@ Change in recycling rate from 2017 to 2025:
 |---|---:|
 | Lake | +7.7 pp |
 | Osceola | +1.9 pp |
-| Orange | −1.7 pp |
-| Seminole | −8.6 pp |
+| Orange | -1.7 pp |
+| Seminole | -8.6 pp |
 
 **Takeaway:** Regional averages can hide substantial differences in county-level recycling performance.
 
@@ -69,7 +69,7 @@ The analysis uses annual county-level municipal solid waste and population data 
 
 The cleaned dataset used in the analysis is available here:
 
-**[county_waste.csv](Data/county_waste.csv)**
+**[Clean County Dataset](Data/county_waste.csv)**
 
 The dataset contains:
 
@@ -124,31 +124,31 @@ Recycling-rate changes are reported in **percentage points (pp)** rather than pe
 
 ## Key Metrics
 
-**MSW Per Capita**
+### MSW Per Capita
 
 `MSW Collected ÷ Population`
 
 Measures the amount of municipal solid waste collected per resident.
 
-**Recycling Rate**
+### Recycling Rate
 
 `MSW Recycled ÷ MSW Collected × 100`
 
 Measures the percentage of collected MSW that was recycled.
 
-**Landfill Rate**
+### Landfill Rate
 
 `MSW Landfilled ÷ MSW Collected × 100`
 
 Measures the percentage of collected MSW that was landfilled.
 
-**MSW Year-over-Year Growth**
+### MSW Year-over-Year Growth
 
 `(Current Year MSW − Previous Year MSW) ÷ Previous Year MSW × 100`
 
 Measures the annual percentage change in MSW collected.
 
-**MSW Growth Above Population Growth**
+### MSW Growth Above Population Growth
 
 `MSW Growth % − Population Growth %`
 
@@ -186,33 +186,32 @@ Power BI Dashboard
        ↓
 Business Findings
 
-## Business Implications
+The SQL queries used for the analysis are available in SQL Analysis.
 
-The analysis suggests that **population growth alone is not sufficient to explain changes in municipal solid waste generation across Central Florida**.
+Business Implications
+
+The analysis suggests that population growth alone is not sufficient to explain changes in municipal solid waste generation across Central Florida.
 
 The differences between counties also indicate that other factors may contribute to waste generation and recycling outcomes, including economic activity, tourism, consumption patterns, and local waste-management practices.
 
 This creates an opportunity to investigate whether economic and tourism indicators can help explain the variation observed in waste generation.
 
-## Future Analysis
+Future Analysis
 
 A potential next phase would combine municipal waste data with economic and tourism indicators to investigate:
 
-- Whether tourism activity is associated with higher waste generation
-- Whether taxable sales and economic activity help explain changes in MSW
-- Which counties are most exposed to a tourism-related slowdown
-- Whether economic activity is associated with changes in recycling performance
+Whether tourism activity is associated with higher waste generation
+Whether taxable sales and economic activity help explain changes in MSW
+Which counties are most exposed to a tourism-related slowdown
+Whether economic activity is associated with changes in recycling performance
+Project Files
+Power BI Dashboard — Final dashboard visualization
+Dashboard PDF — Full dashboard
+Clean Dataset — Dataset used for analysis
+SQL Analysis — SQL queries used to analyze the data
+Data Dictionary — Variable definitions and metric calculations
+Project Takeaway
 
-## Project Files
-
-- **[Power BI Dashboard](dashboard.png)** — Final dashboard visualization
-- **[Dashboard PDF](Central%20Florida%20Municipal%20Solid%20Waste%20Analysis.pdf)** — Full dashboard
-- **[Clean Dataset](Data/county_waste.csv)** — Dataset used for analysis
-- **[SQL Analysis](SQL/analysis.sql)** — SQL queries used to analyze the data
-- **[Data Dictionary](DATA_DICTIONARY.md)** — Variable definitions and metric calculations
-
-## Project Takeaway
-
-The analysis shows that **more people do not necessarily mean proportionally more waste**.
+The analysis shows that more people do not necessarily mean proportionally more waste.
 
 Central Florida's waste patterns vary substantially across both time and counties. Examining population, per-capita waste generation, growth rates, and recycling performance together provides a more complete picture than looking at total waste alone.
