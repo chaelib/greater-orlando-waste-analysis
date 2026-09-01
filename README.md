@@ -4,58 +4,74 @@
 
 ![Central Florida Municipal Solid Waste Analysis](dashboard.png)
 
-## Overview
+[View the full Power BI dashboard (PDF)](Central%20Florida%20Municipal%20Solid%20Waste%20Analysis.pdf)
 
-How is Central Florida's waste generation changing, and is population growth enough to explain it?
+---
+
+## Executive Summary
+
+**How has municipal solid waste generation changed across Central Florida, and is population growth enough to explain those changes?**
 
 This project analyzes municipal solid waste (MSW), recycling, landfill use, population, and per-capita waste generation across **Orange, Seminole, Osceola, and Lake counties** from **2017–2025**.
 
-The goal was to move beyond simply describing waste levels and identify whether changes in waste generation were associated with population growth, as well as where the largest differences in waste and recycling performance occurred across counties.
+Rather than simply comparing total waste between counties, the analysis examines waste generation relative to population, year-over-year changes, and differences in recycling performance to identify where the most meaningful trends occur.
 
 ## Key Findings
 
-### Waste has not consistently followed population growth
+### Waste growth has not consistently followed population growth
 
-Regional MSW increased **17.1%** from 2017 to 2025, while MSW per capita decreased **3.6%**.
+Regional MSW increased **17.1%** from 2017 to 2025, while regional MSW per capita decreased **3.6%**.
 
-Annual results also varied considerably. For example, in 2020, regional MSW decreased **10.71%** while population increased **2.33%**. In 2023, MSW increased **15.28%** while population grew only **1.42%**.
+Annual changes also varied substantially. In 2020, MSW decreased **10.71%** while population increased **2.33%**. In 2023, MSW increased **15.28%** while population grew only **1.42%**.
 
-This suggests that **population growth alone does not explain changes in regional waste generation**.
+**Takeaway:** Population growth alone does not explain changes in regional waste generation.
 
-### County performance varies substantially
+### Waste generation differs significantly by county
 
-Lake County experienced the largest increase in MSW, with waste generation increasing approximately **76.9% from 2017 to 2025**.
+Orange County had the highest average MSW per capita at approximately **2.622 tons per resident**, while Osceola County had the lowest at approximately **0.736 tons per resident**.
 
-Orange County had the highest average MSW per capita at approximately **2.622 tons per person**, while Osceola had the lowest at approximately **0.736 tons per person**.
+Lake County experienced the largest increase in MSW from 2017 to 2025, with waste generation increasing approximately **76.9%**.
 
-### Recycling trends have diverged across counties
+**Takeaway:** County-level waste patterns differ substantially even within the same region.
 
-Recycling performance changed differently across the four counties between 2017 and 2025:
+### Recycling performance has diverged across counties
 
-- **Lake County:** +7.7 percentage points
-- **Osceola County:** +1.9 percentage points
-- **Orange County:** −1.7 percentage points
-- **Seminole County:** −8.6 percentage points
+Change in recycling rate from 2017 to 2025:
 
-These differences suggest that county-level waste management and recycling outcomes cannot be understood from regional averages alone.
+| County | Change in Recycling Rate |
+|---|---:|
+| Lake | +7.7 pp |
+| Osceola | +1.9 pp |
+| Orange | −1.7 pp |
+| Seminole | −8.6 pp |
+
+**Takeaway:** Regional averages can hide substantial differences in county-level recycling performance.
+
+---
 
 ## Business Questions
 
-The analysis was designed around several questions:
+The analysis was designed around the following questions:
 
-1. **Is waste generation growing faster or slower than population in Greater Orlando?**
-2. **How has regional waste generation changed over time?**
-3. **How much MSW is generated per resident?**
-4. **Which counties generate the most waste relative to their populations?**
-5. **Which counties have the strongest recycling performance?**
-6. **How have waste generation and recycling rates changed from 2017 to 2025?**
-7. **Which counties experienced waste growth that exceeded population growth?**
+1. Is waste generation growing faster or slower than population?
+2. How has regional MSW generation changed from 2017–2025?
+3. How much MSW is collected per resident?
+4. Which counties generate the most waste relative to their populations?
+5. Which counties have the strongest recycling performance?
+6. How have waste generation and recycling rates changed between 2017 and 2025?
+7. Which counties experienced waste growth that exceeded population growth?
+
+---
 
 ## Data
 
-The analysis uses annual county-level municipal solid waste and population data covering Orange, Seminole, Osceola, and Lake counties from 2017 through 2025.
+The analysis uses annual county-level municipal solid waste and population data for **Orange, Seminole, Osceola, and Lake counties** from **2017–2025**.
 
-The dataset includes:
+The cleaned dataset used in the analysis is available here:
+
+**[county_waste.csv](Data/county_waste.csv)**
+
+The dataset contains:
 
 - Population
 - MSW collected
@@ -67,100 +83,105 @@ The dataset includes:
 - Recycled MSW per capita
 - Year-over-year MSW growth
 
-The cleaned dataset used for the analysis is available in:
+See the **[Data Dictionary](DATA_DICTIONARY.md)** for variable definitions and calculation methods.
 
-`Data/county_waste.csv`
-
-See [`DATA_DICTIONARY.md`](DATA_DICTIONARY.md) for variable definitions and calculation methods.
+---
 
 ## Methodology
 
-### 1. Regional analysis
+### Regional Analysis
 
-County-level observations were aggregated by year to create regional totals for population, MSW collected, recycled waste, and landfilled waste.
+County-level observations were aggregated by year to calculate regional totals for population, MSW collected, recycled waste, and landfilled waste.
 
-### 2. Per-capita analysis
+### Per-Capita Analysis
 
-MSW per capita was calculated by dividing total MSW collected by population.
+MSW per capita was calculated as:
 
-This provides a way to compare waste generation while accounting for differences in population size.
+`MSW Collected ÷ Population`
 
-### 3. Growth analysis
+This allows waste generation to be compared while accounting for differences in population size.
 
-Annual MSW growth was compared with annual population growth to determine whether changes in waste generation were occurring at a faster or slower rate than changes in population.
+### Growth Analysis
 
-### 4. County comparison
+Annual MSW growth was compared with annual population growth to determine whether waste generation was increasing or decreasing faster than the population.
 
-County-level averages and overall rates were used to compare:
+### County Comparison
 
-- MSW per capita
-- Recycled waste per capita
-- Recycling rates
-- Landfill rates
+County-level analysis compared:
 
-### 5. 2017–2025 comparison
+- Average MSW per capita
+- Average recycled waste per capita
+- Overall recycling rate
+- Overall landfill rate
 
-Beginning- and end-period values were compared to identify how each county changed over the nine-year period.
+### 2017–2025 Comparison
+
+County-level MSW and recycling rates were compared between 2017 and 2025 to identify changes over the full analysis period.
 
 Recycling-rate changes are reported in **percentage points (pp)** rather than percent change.
 
+---
+
 ## Key Metrics
 
-### MSW Per Capita
+**MSW Per Capita**
 
 `MSW Collected ÷ Population`
 
 Measures the amount of municipal solid waste collected per resident.
 
-### Recycling Rate
+**Recycling Rate**
 
 `MSW Recycled ÷ MSW Collected × 100`
 
-Measures the share of collected MSW that was recycled.
+Measures the percentage of collected MSW that was recycled.
 
-### Landfill Rate
+**Landfill Rate**
 
 `MSW Landfilled ÷ MSW Collected × 100`
 
-Measures the share of collected MSW that was landfilled.
+Measures the percentage of collected MSW that was landfilled.
 
-### MSW Year-over-Year Growth
+**MSW Year-over-Year Growth**
 
 `(Current Year MSW − Previous Year MSW) ÷ Previous Year MSW × 100`
 
 Measures the annual percentage change in MSW collected.
 
-### MSW Growth Above Population Growth
+**MSW Growth Above Population Growth**
 
 `MSW Growth % − Population Growth %`
 
-Measures how much faster or slower MSW grew compared with population.
+Measures whether MSW grew faster or slower than population over the same period.
 
-A positive value means MSW grew faster than population, while a negative value means population grew faster than MSW.
+A positive value indicates that MSW grew faster than population.
+
+---
 
 ## Tools
 
 **SQL / MySQL**  
-Used for data aggregation, joins, growth calculations, per-capita calculations, and county-level comparisons.
+Used for aggregation, joins, growth calculations, per-capita analysis, and county-level comparisons.
 
 **Power BI**  
-Used to build the interactive dashboard and communicate regional and county-level trends.
+Used to build the dashboard and visualize regional and county-level trends.
 
 **Excel**  
 Used for data preparation and organization.
 
+---
+
 ## Analytical Workflow
 
 ```text
-Raw Data
-   ↓
+County-Level Data
+       ↓
 Data Preparation
-   ↓
+       ↓
 SQL Analysis
-   ↓
+       ↓
 Regional & County-Level Metrics
-   ↓
+       ↓
 Power BI Dashboard
-   ↓
+       ↓
 Business Findings
-
