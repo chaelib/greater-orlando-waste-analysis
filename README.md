@@ -2,58 +2,76 @@
 
 **SQL | Power BI | Data Analysis**
 
-## Overview
-
-This project analyzes municipal solid waste (MSW) generation and recycling performance across four Central Florida counties — Orange, Seminole, Osceola, and Lake — from 2017 to 2025.
-
-The goal was to determine how waste generation changed over time, whether changes in waste generation were proportional to population growth, and which counties experienced the greatest changes in recycling performance.
+![Central Florida Municipal Solid Waste Analysis](dashboard.png)
 
 ## Business Question
 
 **How has municipal solid waste generation changed across Central Florida, and to what extent can changes be explained by population growth?**
 
+## Key Findings
+
+- **Regional MSW increased 17.1%** from 2017 to 2025, while **MSW per capita decreased 3.6%**.
+- **Lake County's MSW increased 76.9%**, substantially outpacing its population growth.
+- Recycling performance diverged across counties. **Lake County improved 7.7 percentage points**, while **Seminole County declined 8.6 percentage points**.
+- Annual changes in waste generation did not consistently follow population growth, suggesting that population alone does not explain changes in regional waste generation.
+
+## Project Overview
+
+This project analyzes municipal solid waste (MSW) generation, recycling, landfill use, population, and waste per capita across four Central Florida counties from 2017 through 2025.
+
+The analysis examines both regional and county-level patterns to understand how waste generation has changed over time and whether changes in waste generation correspond with population growth.
+
+**Counties analyzed:** Orange, Seminole, Osceola, and Lake  
+**Analysis period:** 2017–2025
+
 ## Data
 
-- **Geography:** Orange, Seminole, Osceola, and Lake Counties, Florida
-- **Period:** 2017–2025
-- **Primary source:** Florida Economic and Demographic Research (EDR)
-- **Metrics:** MSW collected, MSW landfilled, MSW recycled, MSW per capita, recycling rate, population, and year-over-year growth
+The analysis uses annual county-level municipal solid waste and population data from the **Florida Economic and Demographic Research (EDR)**.
+
+Key variables include:
+
+- Population
+- MSW collected
+- MSW recycled
+- MSW landfilled
+- Recycling rate
+- Landfill rate
+- MSW per capita
+- Recycled MSW per capita
+- Year-over-year MSW growth
 
 ## Tools
 
-- **SQL:** Data cleaning, aggregation, calculations, and comparative analysis
-- **Power BI:** Data visualization and dashboard development
-- **Excel:** Data preparation and organization
+- **SQL / MySQL** — Data aggregation, calculations, comparisons, and analysis
+- **Power BI** — Interactive dashboard and data visualization
+- **Excel** — Data preparation and organization
 
 ## Analytical Approach
 
-1. Cleaned and structured county-level MSW and population data.
-2. Calculated changes in waste generation and waste per capita.
-3. Compared MSW growth with population growth.
-4. Analyzed county-level recycling-rate changes between 2017 and 2025.
-5. Examined annual recycling and MSW-per-capita patterns from 2017–2025.
-6. Built an interactive Power BI dashboard to communicate the results.
-
-## Key Findings
-
-### 1. Regional waste increased while waste per capita declined
-
-Regional MSW increased approximately **17.1%** between 2017 and 2025, while MSW per capita decreased approximately **3.6%**.
-
-### 2. Lake County experienced the largest increase in MSW
-
-Lake County's MSW increased approximately **76.9%** between 2017 and 2025, substantially outpacing its population growth.
-
-### 3. Recycling performance diverged across counties
-
-Lake County's recycling rate improved by **7.7 percentage points**, while Seminole County's recycling rate declined by **8.6 percentage points**.
+1. Aggregated county-level data into annual regional totals.
+2. Calculated regional MSW per capita and recycling rates.
+3. Compared annual MSW growth with population growth.
+4. Compared county-level waste generation and recycling performance.
+5. Analyzed changes between 2017 and 2025.
+6. Identified counties where MSW growth outpaced population growth.
+7. Built a Power BI dashboard to communicate the findings.
 
 ## Business Implications
 
-The results suggest that population growth alone does not explain changes in waste generation across Central Florida. Large differences between counties indicate that other factors — including economic activity, tourism, consumption patterns, and waste-management practices — may influence waste generation and recycling performance.
+The analysis suggests that population growth alone does not explain changes in municipal solid waste generation across Central Florida.
 
-## Dashboard
+The substantial differences between counties indicate that additional factors such as economic activity, tourism, consumption patterns, and waste-management practices may contribute to differences in waste generation and recycling performance.
 
-![Central Florida Municipal Solid Waste Analysis](dashboard.png)
+## Repository Contents
 
-The completed Power BI dashboard is also available as a PDF in this repository.
+- `dashboard.png` — Final Power BI dashboard
+- `Central Florida Municipal Solid Waste Analysis.pdf` — PDF version of the dashboard
+- `SQL/analysis.sql` — SQL queries used for the analysis
+- `DATA_DICTIONARY.md` — Dataset variables and metric definitions
+
+## Future Analysis
+
+A potential next step would be to examine whether tourism activity and economic activity help explain county-level differences in waste generation.
+
+This could involve comparing municipal solid waste trends with tourism indicators, taxable sales, and other measures of regional economic activity.
+
