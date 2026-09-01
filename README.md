@@ -173,44 +173,58 @@ Used for data preparation and organization.
 
 ## Analytical Workflow
 
-```text
-County-Level Data
-       ↓
-Data Preparation
-       ↓
-SQL Analysis
-       ↓
-Regional & County-Level Metrics
-       ↓
-Power BI Dashboard
-       ↓
-Business Findings
+    County-Level Data
+           ↓
+    Data Preparation
+           ↓
+    SQL Analysis
+           ↓
+    Regional & County-Level Metrics
+           ↓
+    Power BI Dashboard
+           ↓
+    Business Findings
 
-The SQL queries used for the analysis are available in SQL Analysis.
+The SQL queries used for the analysis are available in **[SQL Analysis](SQL/analysis.sql)**.
 
-Business Implications
+---
 
-The analysis suggests that population growth alone is not sufficient to explain changes in municipal solid waste generation across Central Florida.
+## Business Implications
+
+The analysis suggests that **population growth alone is not sufficient to explain changes in municipal solid waste generation across Central Florida**.
 
 The differences between counties also indicate that other factors may contribute to waste generation and recycling outcomes, including economic activity, tourism, consumption patterns, and local waste-management practices.
 
 This creates an opportunity to investigate whether economic and tourism indicators can help explain the variation observed in waste generation.
 
-Future Analysis
+---
+
+## Future Analysis
 
 A potential next phase would combine municipal waste data with economic and tourism indicators to investigate:
 
-Whether tourism activity is associated with higher waste generation
-Whether taxable sales and economic activity help explain changes in MSW
-Which counties are most exposed to a tourism-related slowdown
-Whether economic activity is associated with changes in recycling performance
-Project Files
-Power BI Dashboard — Final dashboard visualization
-Dashboard PDF — Full dashboard
-Clean Dataset — Dataset used for analysis
-SQL Analysis — SQL queries used to analyze the data
-Data Dictionary — Variable definitions and metric calculations
-Project Takeaway
+- Whether tourism activity is associated with higher waste generation
+- Whether taxable sales and economic activity help explain changes in MSW
+- Which counties are most exposed to a tourism-related slowdown
+- Whether economic activity is associated with changes in recycling performance
+
+---
+
+## Project Files
+
+- **[Power BI Dashboard](dashboard.png)** — Final dashboard visualization
+- **[Dashboard PDF](Central%20Florida%20Municipal%20Solid%20Waste%20Analysis.pdf)** — Full dashboard
+- **[Clean Dataset](Data/county_waste.csv)** — Dataset used for analysis
+- **[SQL Analysis](SQL/analysis.sql)** — SQL queries used to analyze the data
+- **[Data Dictionary](DATA_DICTIONARY.md)** — Variable definitions and metric calculations
+
+---
+
+## Project Takeaway
+
+The analysis shows that **more people do not necessarily mean proportionally more waste**.
+
+Central Florida's waste patterns vary substantially across both time and counties. Examining population, per-capita waste generation, growth rates, and recycling performance together provides a more complete picture than looking at total waste alone.
 
 The analysis shows that more people do not necessarily mean proportionally more waste.
 
